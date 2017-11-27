@@ -17,4 +17,12 @@ public class Handler {
         this.controllerClass = controllerClass;
         this.actionMethod = actionMethod;
     }
+
+    public Class<?> getControllerClass(){
+        return controllerClass;
+    }
+
+    public Method getActionMethod(){
+        return actionMethod;
+    }
 }
