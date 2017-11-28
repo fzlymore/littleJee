@@ -1,3 +1,4 @@
+import CGlib.CGLProxy;
 import org.junit.Test;
 
 import java.lang.reflect.Proxy;
@@ -36,5 +37,11 @@ public class HelloTest {
          DynamicProxy dynamicProxy = new DynamicProxy(new HelloImpl());
         Hello helloProxy = dynamicProxy.getProxy();
         helloProxy.say("juice");
+    }
+
+    @Test
+    public void test5() throws Exception {
+        Hello helloproxy = CGLProxy.getInstance().getProxy(HelloImpl.class);
+        helloproxy.say("peach");
     }
 }
