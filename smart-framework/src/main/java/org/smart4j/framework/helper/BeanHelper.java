@@ -4,6 +4,7 @@ import org.smart4j.framework.util.ReflectionUtil;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -39,6 +40,13 @@ public class BeanHelper {
              throw new RuntimeException("can not get bean by class"+cls);
          }
         return (T)BEAN_MAP.get(cls);
+    }
+
+    /**
+     * 设置bean实例
+     */
+    public static void setBean(Class<?> cls ,Object obj){
+        BEAN_MAP.put(cls, obj);
     }
 
 }

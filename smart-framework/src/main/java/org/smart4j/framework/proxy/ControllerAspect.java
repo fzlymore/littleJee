@@ -2,12 +2,15 @@ package org.smart4j.framework.proxy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.smart4j.framework.annotation.Aspect;
+import org.smart4j.framework.annotation.Controller;
 
 import java.lang.reflect.Method;
 
 /**
  * Created by wh1te on 2017/11/28.
  */
+@Aspect(Controller.class)
 public class ControllerAspect extends AspectProxy {
     private static final Logger LOGGER = LoggerFactory.getLogger(ControllerAspect.class);
 
