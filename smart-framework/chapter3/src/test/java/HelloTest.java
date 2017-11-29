@@ -41,7 +41,7 @@ public class HelloTest {
 
     @Test
     public void test5() throws Exception {
-        Hello helloproxy = CGLProxy.getInstance().getProxy(HelloImpl.class);
-        helloproxy.say("peach");
+        Hello helloProxy = CGLProxy.getInstance().getProxy(HelloImpl.class);
+        helloProxy.say("peach");
     }
 }
